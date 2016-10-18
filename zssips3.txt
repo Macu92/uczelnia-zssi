@@ -1,0 +1,24 @@
+3  DT=(U,Au{d}) B={okulary,kolczyk}
+	1 dzielimy na grupy wzgledem takich samych atrybutow Bc-A {x1,x4,x7}{x2}{x3}{x5,x6} nastepnie wyznaczamy dolna aproksymacje czyli elementyobiektow 
+nalezoce do 1 klasy decyzyjen w calosci czylki np zbior gdzie sa sami studenci czy wykladowacy czyli LOW(student(x)=1)={x2,x3}, z kolei obszar brzegowy to te elementy do ktorych 
+nie mamy pewnosci np tj w zbiorze {x1,x4,x7}, jest jteszcze gorna aproksymacja gdzie okreslamy elementy ktore moga nalezec ale nie musze np nalezy tylko 1 element
+tj gorna aproksdymacja dla studetna  UPP1 = {x1,x4,x7,x2,x3}
+
+	4 calosc\UPp czuloi calosc odjac gorna aproksymacja student 1
+	5 studenx(0)= POS{x2,x3,x5,x6} czyli suma dolnych obnszarow
+	9.tablica sprzeczna jest gdy do obszaru pozytywnego nie naleza qwszystkie obiekty tzn  (U,Bu{student}) jest sprzecznty z obszarem pozytywnym powyzej bo 
+
+
+zad 1:
+a1=c(0,0,1,0,1,0,0)
+a2=c(0,0,0,1,1,0,0)
+a3=c(0,0,1,0,1,1,0)
+a4=c(0,1,1,0,0,0,0)
+a5=c(1,1,1,1,0,0,0)
+df=data.frame(siwe_wlosy=a1,zarost=a2,okulary=a3,kolczyk=a4,student=a5)
+dt=SF.asDecisionTable(dataset=df,decision.attr=5,indx.nominal=c(3:4))
+ind=BC.IND.relation.RST(dt,c(3,4))
+app=BC.LU.approximation.RST(dt,ind)
+app$lower.approximation$`1`
+
+zad2
